@@ -1,0 +1,49 @@
+header{
+    background: #014E56;
+}
+
+.header__inner{
+    @include row;
+    padding: {
+        top: 50px;
+        bottom: 50px;
+    }
+}
+
+.header__link{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+    color: #FFFFFF;
+}
+
+.header__list{
+    @include row;
+    margin-left: 40px;
+
+    .header__item{
+        margin-left: 40px;
+
+        .header__item-link{
+            font-style: normal;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 28px;
+            color: #FFFFFF;
+        }
+    }
+
+}
+
+.header__namber{
+    margin-left: auto;
+    padding: 10px 33px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    border-radius: 24px;
+}
