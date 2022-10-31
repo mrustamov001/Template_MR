@@ -1,0 +1,126 @@
+.services{
+    position: relative;
+    background: #012F34;
+    &::after{
+        background-image: url(../../images/home-services-imgright.svg);
+        position: absolute;
+        display: block;
+        width: 100px;
+        height: 244px;
+        content: "";
+        right: 0;
+        bottom: 0
+    }
+}
+
+.services__inner{
+    @include row;
+    padding: {
+        top: 198px;
+        bottom: 140px; 
+    };
+}
+
+.services__title{
+    position: relative;
+    width: 446px;
+    margin: 0;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 48px;
+    color: #FFFFFF;
+
+    &::before{
+        position: absolute;
+        display: block;
+        width: 50px;
+        height: 4px;
+        top: -50px;
+        content: "";
+        background: #F67E7E;
+    }
+}
+
+.services__list{
+    margin-left: auto;
+}
+
+.services__item{
+    @include row;
+    align-items: center;
+    width: 540px;
+}
+
+.services__box{
+    margin-left: 24px;
+}
+
+.services__item-title{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 28px;
+    color: #F67E7E;
+}
+
+.services__item-description{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 25px;
+    color: #FFFFFF;
+    opacity: 0.8;
+}
+
+@media only screen and (max-width:1000px) {
+    .services__inner{
+        display: block;
+        margin: 0 auto;
+        padding: {
+            left: 60px;
+            right: 60px;
+        };
+    }
+
+    .services__title{
+        width: 445px;
+        margin-bottom: 64px;
+        font-size: 32px;
+        line-height: 32px;
+    }
+
+    .services__item{
+        width: 573px;
+    }
+
+    .services::after{
+        top: 0;
+        right: 0;
+    }
+}
+
+@media only screen and (max-width:729px) {
+    .services__inner{
+
+        padding: {
+            left: 0px;
+            right: 0px;
+        };
+    }
+
+    .services__item{
+        display: block;
+        width: 354px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+    .services__title{
+        width: 240px;
+    }
+
+    .services__item-description{
+        margin-bottom: 48px;
+    }
+}

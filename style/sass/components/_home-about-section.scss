@@ -1,0 +1,143 @@
+.about{
+    position: relative;
+    background: #004047;
+    &::before{
+        position: absolute;
+        display: block;
+        width: 147px;
+        height: 100px;
+        top: 0;
+        content: "";
+        background-image: url(../../../images/home-about-img-left.svg);
+    }
+
+    &::after{
+        position: absolute;
+        display: block;
+        width: 200px;
+        height: 100px;
+        bottom: 0;
+        right: 0;
+        content: "";
+        background-image: url(../../../images/home-about-img-right.svg);
+    }
+}
+
+.about__inner{
+    padding: {
+        top: 140px;
+        bottom: 150px;
+    };
+}
+
+.about__title{
+    width: 945px;
+    margin: 0 auto;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 48px;
+    text-align: center;
+    color: #FFFFFF;
+
+    &-box{
+        color: #79C8C7;
+    }
+}
+
+.about__list{
+    @include row;
+
+}
+
+.about__item{
+    position: relative;
+    width: 350px;
+    margin-top: 92px;
+    margin: {
+        left: 15px;
+        right: 15px;
+    };
+    text-align: center;
+
+    &::before{
+        position: absolute;
+        top: -25px;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        display: block;
+        width: 67px;
+        height: 56px;
+        margin: 0 auto;
+        content: "";
+        background-image: url(../../../images/home-about-img-item.svg);
+    }
+}
+
+.about__item-description{
+    position: relative;
+    z-index: 2;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 25px;
+    color: #FFFFFF;
+}
+
+.about__item-title{
+    margin: {
+        top: 24px;
+        bottom: 2px;
+    };
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 28px;
+    color: #79C8C7;
+}
+
+.about__item-text{
+    display: block;
+    margin-bottom: 32px;
+    font-size: 13px;
+    line-height: 18px;
+    color: #FFFFFF;
+}
+
+@media only screen and (max-width:1020px) {
+    .about__title{
+        width: 506px;
+        font-size: 32px;
+        line-height: 32px;
+    }
+
+    .about__list{
+        display: block;
+        margin-top: 84px;
+    }
+    
+    .about__item{
+        display: block;
+        width: 573px;
+        margin: 0 auto;
+        align-items: center;
+    }
+
+    .about__item-description{
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .about__item-img{
+        margin-bottom: 84px;
+    }
+}
+
+@media only screen and (max-width:729px) {
+    .about__title{
+        width: 327px;
+    }
+
+    .about__item{
+        width: 327px;
+    }
+}

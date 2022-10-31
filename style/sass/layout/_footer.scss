@@ -1,0 +1,141 @@
+footer{
+    background: #002529;
+    padding: 48px 0;
+}
+
+.footer__inner{
+    @include row;
+}
+
+.footer__wrapper{
+    @include row;
+}
+
+.footer__links{
+    margin-right: 125px;
+}
+
+.footer__box{
+    margin-left: auto;
+}
+
+.footer__list{
+    @include row;
+    margin-top: 25px;
+}
+
+.footer__item{
+    margin-right: 40px;
+    &:last-child{
+        margin-right: 0;
+    }
+}
+
+.footer__item-link{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+    color: #FFFFFF;
+}
+
+.footer__card-link{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 25px;
+    color: #FFFFFF;
+}
+
+.footer__logos{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.footer__logo-link{
+    margin-right: 16px;
+    &:last-child{
+        margin-right: 0;
+    }
+    margin-bottom: 51px;
+}
+
+.footer__logos-description{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 25px;
+    text-align: right;
+    color: #FFFFFF;
+    mix-blend-mode: normal;
+    opacity: 0.6;
+}
+
+@media only screen and (max-width:1000px) {
+    .footer__logo{
+        width: 96px;
+        height: 24px;
+        margin-bottom: 26px;
+    }
+
+    .footer__item-link{
+        font-size: 15px;
+        line-height: 25px;
+    }
+
+    .footer__inner{
+        display: block;
+    }
+
+    .footer__wrapper{
+        justify-content: space-between;
+    }
+    
+    .footer__card-item{
+        text-align: end;
+    }
+
+    .footer__box{
+        @include row;
+        justify-content: space-between;
+        margin-top: 34px;
+    }
+}
+
+@media only screen and (max-width:728px){
+    .footer__inner{
+        flex-direction: column;
+    }
+    
+    .footer__wrapper{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer__logo{
+        margin-bottom: 24px;
+    }
+
+    .footer__list{
+        margin-top: 0;
+        margin-bottom: 24px;
+    }
+    
+    .footer__box{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer__links{
+        text-align: center;
+        margin-right: 0;
+    }
+
+    .footer__card-item{
+        text-align: center;
+    }
+
+    .footer__logos{
+        margin-bottom: -35px;
+    }
+}

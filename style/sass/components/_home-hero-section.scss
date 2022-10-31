@@ -104,7 +104,9 @@
     }
 
     .hero__inner::after{
-
+        position: absolute;
+        margin: 0 auto;
+        left: 0;
     }
 }
 
