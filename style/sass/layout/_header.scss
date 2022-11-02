@@ -1,10 +1,12 @@
 header{
+    position: relative;
     width: 100%;
     background: #014E56;
 }
 
 .header__inner{
     @include row;
+    align-items: center ;
     padding: {
         top: 50px;
         bottom: 50px;
@@ -17,6 +19,11 @@ header{
     font-size: 18px;
     line-height: 28px;
     color: #FFFFFF;
+}
+
+.header__nav{
+    @include row;
+    align-items: center
 }
 
 .header__list{
@@ -37,8 +44,7 @@ header{
 
 }
 
-.header__namber{
-    margin-left: auto;
+.header__item-namber{
     padding: 10px 33px;
     font-style: normal;
     font-weight: 600;
@@ -49,34 +55,42 @@ header{
     border-radius: 24px;
 }
 
+.header__item--active{
+    margin-left: auto;
+}
+
 .header__btn{
     display: none;
+}
+
+.header__btn{
     width: 20px;
-    height: 3px;
+    height: 17px;
     padding: 0;
     border: none;
-    
+    background-color: transparent;
+
     &::before,
     &::after,
-    &-inner {
-        border-radius: 50px;
+    &-inner{
         display: block;
-        width: 103%;
-        height: 3px;
-        background: #FFFFFF;
         content: "";
-        margin-bottom: 3px;
+        width: 100%;
+        height: 3px;
+        background-color: #fff;
+        transition: all 0.6s ease;
+    }
+
+    &-inner{
+        margin: 4px 0;
     }
 }
 
 @media only screen and (max-width:600px) {
-    .header__list{
+    .header__nav{
         display: none;
     }
 
-    .header__namber{
-        display: none;
-    }
 
     .header__title{
         margin-bottom: 18px;
@@ -86,4 +100,59 @@ header{
         display: block;
         margin-left: auto;
     }
+    
+    .header__btn--opened{
+        position: relative;
+        
+        & .header__btn-inner{
+            display: none;
+        }
+        
+        &::before,
+        &::after{
+            position: absolute;
+            width: 100%;
+            z-index: 3;
+    }
+
+    &::before{
+        transform: rotate(45deg);
+    }
+    
+    &::after{
+        transform: rotate(-45deg);
+    }
+}
+
+.header__nav--opened{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    display: block;
+    width: 70%;
+    height: 100vh;
+    padding: 112px 48px;
+    flex-direction: column;
+    align-items: stretch;
+    background: #2C6269;
+}
+
+.header__list{
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+    margin-bottom: 36px;
+    align-items: stretch;
+}
+
+.header__item{
+    margin: 0;
+    padding: 0;
+    margin-bottom: 24px;
+}
+
+.header__list .header__item {
+    margin-left: 0px;
+}
 }

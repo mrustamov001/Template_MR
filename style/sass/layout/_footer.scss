@@ -71,6 +71,22 @@ footer{
     opacity: 0.6;
 }
 
+.social{
+    color: #FFFFFF;
+    transform: scale(1);
+    transition: all 0.6s ease;
+}
+
+.social:hover{
+    transform: scale(2);
+    color: #32b0bd;
+}
+
+.social:active{
+    transform: scale(1);
+    color: #073439;
+}
+
 @media only screen and (max-width:1000px) {
     .footer__logo{
         width: 96px;
